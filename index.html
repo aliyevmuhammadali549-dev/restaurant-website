@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUXE TASTE - Premium Fine Dining Experience. Discover our exquisite menu and reserve your table today.">
+    <title>LUXE TASTE - Premium Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-text">LUXE</span>
+                <span class="logo-accent">TASTE</span>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="reservation.html" class="nav-link">Reservations</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="cart.html" class="nav-link cart-link"><i class="cart-icon">🛒</i> <span id="cartCount">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Experience Culinary Excellence</h1>
+                <p class="hero-subtitle">Discover our signature dishes crafted by world-class chefs using premium ingredients</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-primary">Order Now</a>
+                    <a href="reservation.html" class="btn btn-secondary">Book a Table</a>
+                </div>
+            </div>
+            
+            <div class="hero-carousel">
+                <div class="floating-card card-1">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop" alt="Premium Burger" class="card-image">
+                    <div class="card-info">
+                        <h3>Premium Burger</h3>
+                        <p>$18.99</p>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <img src="https://images.unsplash.com/photo-1542834369-63e3e7b75f27?w=400&h=400&fit=crop" alt="Gourmet Pizza" class="card-image">
+                    <div class="card-info">
+                        <h3>Gourmet Pizza</h3>
+                        <p>$22.99</p>
+                    </div>
+                </div>
+                <div class="floating-card card-3">
+                    <img src="https://images.unsplash.com/photo-1585238341710-4b6ae60a8553?w=400&h=400&fit=crop" alt="Fried Chicken" class="card-image">
+                    <div class="card-info">
+                        <h3>Fried Chicken</h3>
+                        <p>$16.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured Dishes</h2>
+            <p class="section-subtitle">Our most loved creations</p>
+            
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=500&fit=crop" alt="Classic Cheeseburger">
+                        <span class="badge">Popular</span>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Classic Cheeseburger</h3>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="rating-text">(245 reviews)</span>
+                        </div>
+                        <p class="featured-price">$16.99</p>
+                        <button class="btn btn-small" onclick="addToCart('Classic Cheeseburger', 16.99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561701?w=500&h=500&fit=crop" alt="Spicy Fried Chicken">
+                        <span class="badge discount">-20%</span>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Spicy Fried Chicken</h3>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star half">★</span>
+                            <span class="rating-text">(189 reviews)</span>
+                        </div>
+                        <p class="featured-price"><span class="original-price">$18.99</span> $15.19</p>
+                        <button class="btn btn-small" onclick="addToCart('Spicy Fried Chicken', 15.19)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1604382206220-bc8f8c801f59?w=500&h=500&fit=crop" alt="Margherita Pizza">
+                        <span class="badge">Chef's Pick</span>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Margherita Pizza</h3>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="rating-text">(312 reviews)</span>
+                        </div>
+                        <p class="featured-price">$20.99</p>
+                        <button class="btn btn-small" onclick="addToCart('Margherita Pizza', 20.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose LUXE TASTE?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🍽️</div>
+                    <h3>Premium Ingredients</h3>
+                    <p>Only the finest, freshest ingredients sourced globally</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Expert Chefs</h3>
+                    <p>Award-winning chefs with 20+ years of experience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Hot meals delivered to your door in 30-45 minutes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Secure Payments</h3>
+                    <p>Multiple payment options with 100% security guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="50000">0</h3>
+                    <p class="stat-label">Happy Customers</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="15">0</h3>
+                    <p class="stat-label">Years in Business</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="150">0</h3>
+                    <p class="stat-label">Menu Items</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="98">0</h3>
+                    <p class="stat-label">% Customer Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="special-offers">
+        <div class="container">
+            <h2 class="section-title">Special Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-content">
+                        <h3>Weekend Combo Pack</h3>
+                        <p>Get 2 Burgers + Fries + Drink</p>
+                        <span class="offer-price">$29.99</span>
+                        <button class="btn btn-small" onclick="addToCart('Weekend Combo Pack', 29.99)">Order Now</button>
+                    </div>
+                </div>
+                <div class="offer-card featured-offer">
+                    <div class="offer-content">
+                        <h3>Family Feast</h3>
+                        <p>4 Main Courses + 2 Sides + Dessert</p>
+                        <span class="offer-price">$89.99</span>
+                        <button class="btn btn-small" onclick="addToCart('Family Feast', 89.99)">Order Now</button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-content">
+                        <h3>Late Night Special</h3>
+                        <p>After 9 PM: 25% OFF on all items</p>
+                        <span class="offer-price">See Menu</span>
+                        <button class="btn btn-small" onclick="window.location.href='menu.html'">View Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);">JM</div>
+                        <div class="testimonial-name">
+                            <h4>John Mitchell</h4>
+                            <p>Verified Customer</p>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The best dining experience I've had in years. The food quality is exceptional and the service is impeccable. Highly recommend!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #4ecdc4 0%, #44a5c2 100%);">SL</div>
+                        <div class="testimonial-name">
+                            <h4>Sarah Lee</h4>
+                            <p>Verified Customer</p>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Ordered for my birthday party and everyone loved it. Fresh ingredients, beautiful presentation, and fantastic taste. Thank you!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f7b731 0%, #f4a828 100%);">MC</div>
+                        <div class="testimonial-name">
+                            <h4>Michael Chen</h4>
+                            <p>Verified Customer</p>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Consistently excellent quality. I've been a regular for 2 years and they never disappoint. Worth every penny!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>LUXE TASTE</h4>
+                    <p>Premium fine dining experience delivered to your door</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">𝕏</a>
+                        <a href="#" class="social-icon">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="reservation.html">Reservations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Mon - Thu: 11am - 11pm</li>
+                        <li>Fri - Sat: 11am - 1am</li>
+                        <li>Sunday: 12pm - 11pm</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>📧 info@luxetaste.com</li>
+                        <li>📍 123 Gourmet St, NYC</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE TASTE. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-notification" id="cartNotification">
+        <span id="notificationText">Added to cart!</span>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
